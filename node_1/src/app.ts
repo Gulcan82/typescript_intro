@@ -1,3 +1,5 @@
+import { gruessen } from './gruesse.js'
+
 // das Ausrufezeichen weist Typescript an, dass wir
 // uns sicher sind, dass es sich hier nicht um NULL
 // handelt
@@ -66,13 +68,15 @@ form.addEventListener('submit', (e) => {
   ergebnis += 'Anzahl der Obstsorten: ' + angewähltesObst.length
 
   let marcErgebnis = `
-  Größe: ${groesse.value}\n
-  Farbe: ${farbenInput.value} 
-  Obstsorten: ${angewähltesObst.join(', ')}
+  Größe: ${groesse.value} <br> \n
+  Farbe: ${farbenInput.value} <br>
+  Obstsorten: ${angewähltesObst.join(', ')} <br>
   Anzahl: ${angewähltesObst.length}
   `;
 
   paragraph.textContent = marcErgebnis
+
+  gruessen('Asadul')
 
 })
 
